@@ -104,7 +104,7 @@ Installation
 -----------------------------------------------------------------------------------------
 Clone the repository:
 
-git clone https://github.com/your-username/password_manager.git
+git clone https://github.com/M4Af/E111.git
 
 
 Go to project directory:
