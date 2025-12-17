@@ -21,35 +21,54 @@ Features:
 -Full CRUD (Create, Read, Update, Delete)
 
 -Filtering:
+
 Title
+
 Email
 
 -Sorting by:
+
 Date (oldest → newest)
+
 Date (newest → oldest)
+
 Title A–Z
+
 Title Z–A
 
 Dynamic routing (/passwords/:id, /edit/:id)
 
 Validation:
+
 Email format validation
+
 Password strength validation
 
 -Error handling with custom error pages
+
 -Responsive, CSS design
+
 -MongoDB running in Docker
+
 
 Technologies
 -----------------------------------------------------------------------------------------
 -Node.js
+
 -Express.js
+
 -EJS
+
 -MongoDB
+
 -MongoDB Compass
+
 -Docker
+
 -Crypto (AES-256 encryption)
+
 -HTML
+
 -CSS
 
 Database Setup
@@ -57,15 +76,19 @@ Database Setup
 The project uses MongoDB running in Docker.
 
 Run MongoDB container:
+
 docker run --name mongo_password_manager -p 27017:27017 -d mongo:6.0
 
 MongoDB Compass:
+
 Create Connection which should be named -> mongo_password_manager
 
 Explanation:
 
 mongo_password_manager –> container name
+
 27017:27017 –> MongoDB default port
+
 mongo:6.0 –> MongoDB version
 
 No login/password required
@@ -92,7 +115,9 @@ cd password_manager
 Install dependencies:
 
 npm install express
+
 npm install ejs
+
 npm install mongodb
 
 
@@ -133,6 +158,7 @@ Endpoints:
 License
 -----------------------------------------------------------------------------------------
 This project is licensed under the MIT License.
+
 See the LICENSE file for details.
 
 
@@ -140,3 +166,4 @@ See the LICENSE file for details.
 Author
 Maksymilian Kręgiel
 -----------------------------------------------------------------------------------------
+
