@@ -123,12 +123,9 @@ npm install mongodb
 
 Running the Application
 -----------------------------------------------------------------------------------------
-Docker command:
-
-docker start mongo_password_manager
 
 
-Start the application:
+Start the application in VS Code:
 
 npm start
 
