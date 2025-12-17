@@ -1,0 +1,1 @@
+docker run --name mongo_password_manager -p 27017:27017 -d mongo:6.0
