@@ -1,0 +1,17 @@
+{
+  "name": "password_manager",
+  "version": "1.0.0",
+  "description": "Notes App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "author": "Maksymilian Kręgiel",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0"
+  }
+}

@@ -1,0 +1,52 @@
+<%- include('../partials/header') %>
+
+<section>
+    <h2><%= pw.title %></h2>
+
+    <p><strong>Email:</strong> <%= pw.mail %></p>
+
+    <p>
+        <strong>Hasło:</strong>
+        <span id="passwordField">********</span>
+    </p>
+
+    <input
+        type="hidden"
+        id="realPassword"
+        value="<%- decryptedPassword %>"
+    >
+
+    <button id="togglePasswordBtn">Pokaż hasło</button>
+
+    <div class="details-actions">
+        <a href="/edit/<%= pw._id %>" class="edit-button">Edytuj</a>
+
+        <form action="/delete/<%= pw._id %>" method="POST">
+            <button type="submit" class="delete-button">Usuń</button>
+        </form>
+    </div>
+
+    <a href="/">Powrót do listy</a>
+</section>
+
+<script>
+    const toggleBtn = document.getElementById('togglePasswordBtn');
+    const passwordField = document.getElementById('passwordField');
+    const realPassword = document.getElementById('realPassword');
+
+    let isVisible = false;
+
+    toggleBtn.addEventListener('click', () => {
+        if (!isVisible) {
+            passwordField.textContent = realPassword.value;
+            toggleBtn.textContent = 'Ukryj hasło';
+            isVisible = true;
+        } else {
+            passwordField.textContent = '********';
+            toggleBtn.textContent = 'Pokaż hasło';
+            isVisible = false;
+        }
+    });
+</script>
+
+<%- include('../partials/footer') %>

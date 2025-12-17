@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+<section>
+    <h2>Edytuj hasło</h2>
+
+    <form method="POST" action="/edit/<%= pw._id %>">
+        <input type="text" name="title" value="<%= pw.title %>" placeholder="Tytuł" required>
+        <input type="email" name="mail" value="<%= pw.mail %>" placeholder="Email" required>
+        <input type="password" name="newPassword" placeholder="Nowe hasło (opcjonalne)">
+        <input type="password" name="repeatPassword" placeholder="Powtórz nowe hasło">
+        <button type="submit">Zapisz zmiany</button>
+    </form>
+</section>
+
+<%- include('../partials/footer') %>

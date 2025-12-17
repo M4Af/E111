@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<section>
+    <h2>Dodaj hasło</h2>
+
+    <form method="POST" action="/add">
+        <input type="text" name="title" placeholder="Tytuł" required>
+        <input type="email" name="mail" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Hasło" required>
+        <button type="submit">Zapisz</button>
+    </form>
+</section>
+
+<%- include('../partials/footer') %>

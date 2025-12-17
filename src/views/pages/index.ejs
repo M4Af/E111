@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+
+<h2>Lista haseł</h2>
+<div class="card">
+    <h3>Filtrowanie</h3>
+    <form method="GET" class="filter-form">
+        <input
+            type="text"
+            name="query"
+            placeholder="Wpisz tytuł lub email..."
+            value="<%= query || '' %>"
+        >
+        <select name="field">
+            <option value="title" <%= field === 'title' ? 'selected' : '' %>>Tytuł</option>
+            <option value="mail" <%= field === 'mail' ? 'selected' : '' %>>Email</option>
+        </select>
+        <button type="submit">Szukaj</button>
+        <a href="/" class="btn btn-secondary">Pokaż wszystkie</a>
+    </form>
+</div>
+<div class="card">
+    <h3>Sortowanie</h3>
+    <form method="GET" class="sort-form">
+        <select name="sort">
+            <option value="dataNew">Data – od najnowszych</option>
+            <option value="dataOld">Data – od najstarszych</option>
+            <option value="increaseLetter">Tytuł A–Z</option>
+            <option value="decreaseLetter">Tytuł Z–A</option>
+        </select>
+        <button type="submit">Sortuj</button>
+    </form>
+</div>
+<ul class="password-list">
+    <% if (passwords.length === 0) { %>
+        <li>Brak wyników</li>
+    <% } %>
+    <% passwords.forEach(pw => { %>
+        <li class="list-item">
+            <a href="/passwords/<%= pw._id %>">
+                <%= pw.title %>
+            </a>
+        </li>
+    <% }) %>
+</ul>
+
+<%- include('../partials/footer') %>
